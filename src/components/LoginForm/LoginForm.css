@@ -1,0 +1,153 @@
+body {
+    display:flex;
+    justify-content: center;
+}
+
+.login-form {
+    font-family: "Noto Sans";
+    display: flex;
+    flex-direction: column;
+    background-color: #CDCDCD;
+    position: relative;
+    border: #000 solid 2px;
+    height: 28rem;
+    width: 25rem;
+    box-shadow: 16px 16px 0 rgba(0, 0, 0, 0.25);
+}
+
+.close {
+    position: absolute;
+    right: 1.5rem;
+    top: 1rem;
+
+    color: black;
+    content:"\00d7";
+    font-size:2em
+}
+
+
+.close:hover {
+    animation-name: spin;
+    animation-duration: 100ms;
+    color: black;
+}
+
+
+@keyframes spin {
+    from {
+        transform:rotate(0deg);
+    } to {
+        transform:rotate(90deg);
+    }
+}
+
+.login-header {
+    margin-top: 3rem;
+    margin-left: 3rem;
+    line-height: 100%;
+}
+
+
+
+.login-slogan {
+    font-size: medium;
+    font-weight: 500;
+    line-height: 100%;
+    margin:0px;
+    text-align: left;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+.login-logo {
+    font-size: 1.5rem;
+    font-weight:900;
+    line-height: 100%;
+    margin: 0.5rem 0 0.5rem 0
+}
+
+form {
+    margin-top: 2rem;
+    margin-left: 3.5rem;
+    margin-right: 3.5rem;
+}
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0.5rem
+}
+
+
+input {
+    padding: 0.25rem 0.5rem;
+    border: black 2px solid;
+    margin-top: 0.5rem;
+}
+input:focus {
+    box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.25);
+    outline: none
+}
+
+.login-button {
+    margin-top: 3rem;
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+    border: black solid 2px;
+    border-radius: 0;
+    font-size: 1rem;
+    background-color: #8a8a8a;
+    font-weight: 700;
+
+}
+
+.login-button:hover {
+    box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.25);
+    border:black solid 2px;
+}
+
+.already {
+    margin-top: 1rem;
+    text-align: center;
+    font-size: 0.8rem
+}
+
+a {
+    color: black;
+    font-weight:700
+}
+
+.signup {
+    font-weight: 700;
+    color: black;
+}
+
+.signup:hover {
+    font-weight: 700;
+    text-decoration: underline;
+    color: black;
+}
+
+.final {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+@media screen and (minWidth: 600px) {
+    
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+      background-color: #fff;
+      color: #000;
+    }
+
+    input {
+        color: black;
+        background-color: white;
+    }
+  }

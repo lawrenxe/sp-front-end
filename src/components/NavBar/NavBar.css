@@ -1,0 +1,32 @@
+
+.a-button {
+    display: block;
+    font-size: 1rem;
+    color: black;
+    border: black solid 4px;
+    padding: 0.25rem 1rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    width: fit-content;
+    font-weight: 700;
+}
+
+.a-button:visited {
+    color: black;
+}
+
+.a-button:hover {
+    color: black;
+    box-shadow: 4px 4px 0px rgba(0,0,0,0.25);
+}
+
+.nav-bar:before {
+    content: "";
+    display: block;
+    background-image: url("src/assets/logo-arrow.png");
+    margin-left: 8rem;
+    background-size:contain;
+    width: 70px;
+    height: 70px;
+    transform: rotate(180deg);
+}
