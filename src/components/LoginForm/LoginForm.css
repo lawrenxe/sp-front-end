@@ -30,6 +30,7 @@ body {
     animation-name: spin;
     animation-duration: 100ms;
     color: black;
+    cursor: pointer;
 }
 
 

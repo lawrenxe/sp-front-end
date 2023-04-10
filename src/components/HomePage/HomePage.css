@@ -1,18 +1,27 @@
+
+
 body {
     font-family: "Noto Sans";
     color: black;
     background-color: white;
-    align-items: start;
 }
 
 
 .home-page {
+    min-width: 100vw;
+    min-height: 100vh;
     margin: 1rem;
     display: grid;
+    grid-template-columns: 1fr 4fr 0.5fr;
+    grid-template-rows: auto auto;
     grid-template-areas:
       "logo slogan signup"
       "nav-info info-grid info-grid";
-    grid-template-rows: auto auto auto;
+  }
+
+  .nav-bar {
+    grid-area: nav-info;
+    margin-left: 2rem;
   }
 
 
@@ -21,8 +30,9 @@ body {
     font-size: 2.5rem;
     font-weight:900;
     line-height: 100%;
-    margin: 0.5rem 0 0.5rem 0;
+    margin: 0.5rem 0 0.5rem 1rem;
     grid-area: logo;
+    align-self:end;
 }
 
 .slogan {
@@ -36,16 +46,5 @@ body {
     margin-left: 1rem;
     margin-top: 1rem;
     grid-area: info-grid;
-}
-
-.signup-button {
-    grid-area: signup;
-    margin-right: 1rem;
-    margin-bottom: 1rem;
-    display: flex;
-    align-items: end;
-    justify-content: end;
-    
-}
-
+  }
 

@@ -3,7 +3,7 @@ import "./SignupButton.css";
 
 const SignupButton = () => {
   return (
-    <a className="signup-a" href="#">
+    <a className="signup-a" href="signup">
       Sign Up
     </a>
   );

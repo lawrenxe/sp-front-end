@@ -1,7 +1,10 @@
-import React from "react";
 import "./NavBar.css";
 
-const NavBar = () => {
+interface NavBarProps {
+  handleClick: () => void;
+}
+
+const NavBar = ({ handleClick }: NavBarProps) => {
   return (
     <div>
       <a className="a-button how-work" href="#">
@@ -13,7 +16,7 @@ const NavBar = () => {
       <a className="a-button" href="#">
         About
       </a>
-      <a className="a-button" href="#">
+      <a className="a-button" onClick={handleClick}>
         A Magic Button
       </a>
     </div>

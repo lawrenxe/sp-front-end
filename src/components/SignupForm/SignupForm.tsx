@@ -11,7 +11,7 @@ export interface User {
 const SignUpForm = () => {
   return (
     <div className="signupForm-form">
-      <a className="close" href="#">
+      <a className="close" href="/">
         ×
       </a>
       <div className="signupForm-header">
@@ -49,7 +49,7 @@ const SignUpForm = () => {
           <button className="signupForm-button">Sign Up</button>
           <p className="already">
             Already have an account?{" "}
-            <a className="login" href="#">
+            <a className="login" href="login">
               Login
             </a>
           </p>

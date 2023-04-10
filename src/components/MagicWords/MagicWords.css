@@ -1,0 +1,16 @@
+.magic-words {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+}
+
+.magic-words::before {
+  content: "";
+  height: 20%;
+}
+
+.magic-word {
+  font-size: 1.5rem;
+}

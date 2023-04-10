@@ -1,5 +1,7 @@
 .grid {
   display: flex;
+  max-height: 80vh;
   flex-direction: row;
   flex-wrap: wrap;
+  overflow-y: scroll;
 }

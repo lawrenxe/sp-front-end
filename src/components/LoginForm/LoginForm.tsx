@@ -4,7 +4,7 @@ import "./LoginForm.css";
 const LoginForm = () => {
   return (
     <div className="login-form">
-      <a className="close" href="#">
+      <a className="close" href="/">
         ×
       </a>
       <div className="login-header">
@@ -24,7 +24,7 @@ const LoginForm = () => {
           <button className="login-button">Login</button>
           <p className="already">
             New to here?{" "}
-            <a className="signup" href="#">
+            <a className="signup" href="signup">
               Sign up
             </a>{" "}
             with us
