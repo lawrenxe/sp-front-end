@@ -5,8 +5,14 @@ import NavBar from "../NavBar/NavBar";
 import InfoGrid from "../InfoGrid/InfoGrid";
 import SignupButton from "../Signup-button/SignupButton";
 import { MagicWords } from "../MagicWords/MagicWords";
+import { User } from "../SignupForm/SignupForm";
+import { Login } from "../LoginForm/LoginForm";
 
-function HomePage() {
+interface HomePageProps {
+  _user: User | undefined;
+}
+
+function HomePage({ _user }: HomePageProps) {
   const handleClick = () => {
     setIsMagic(!isMagic);
   };
@@ -36,7 +42,7 @@ function HomePage() {
         </div>
       )}
       <div className="signup-button">
-        <SignupButton />
+        {_user ? <p>{_user.lastName}</p> : <SignupButton />}
       </div>
     </div>
   );
