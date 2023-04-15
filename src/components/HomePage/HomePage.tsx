@@ -7,12 +7,14 @@ import SignupButton from "../Signup-button/SignupButton";
 import { MagicWords } from "../MagicWords/MagicWords";
 import { User } from "../SignupForm/SignupForm";
 import { Login } from "../LoginForm/LoginForm";
+import Logout from "../Logout/Logout";
 
 interface HomePageProps {
-  _user: User | undefined;
+  _user: User | null;
+  handleLogout: () => void;
 }
 
-function HomePage({ _user }: HomePageProps) {
+function HomePage({ _user, handleLogout }: HomePageProps) {
   const handleClick = () => {
     setIsMagic(!isMagic);
   };
@@ -30,7 +32,7 @@ function HomePage({ _user }: HomePageProps) {
       </div>
 
       <div className="nav-bar">
-        <NavBar handleClick={handleClick} />
+        <NavBar handleClick={handleClick} user={_user} />
       </div>
       {isMagic ? (
         <div className="info-grid">
@@ -42,7 +44,11 @@ function HomePage({ _user }: HomePageProps) {
         </div>
       )}
       <div className="signup-button">
-        {_user ? <p>{_user.lastName}</p> : <SignupButton />}
+        {_user !== null ? (
+          <Logout handleLogout={handleLogout} _user={_user} />
+        ) : (
+          <SignupButton />
+        )}
       </div>
     </div>
   );

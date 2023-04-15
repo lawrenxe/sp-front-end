@@ -31,3 +31,7 @@
     height: 70px;
     transform: rotate(180deg);
 }
+
+.post {
+    background-color: lightgrey;
+}

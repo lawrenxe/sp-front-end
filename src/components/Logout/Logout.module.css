@@ -1,0 +1,22 @@
+.greeting{
+  font-size: 1em;
+  font-weight: 700;
+}
+.logout-button {
+  display: block;
+  font-size: 1rem;
+  color: black;
+  border: black solid 4px;
+  padding: 0.25rem 1rem;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  width: fit-content;
+  font-weight: 700;
+  border-radius: 0;
+  background-color: white;
+}
+.logout-button:hover {
+  outline:none;
+  box-shadow: 4px 4px 0px rgba(0,0,0,0.25);
+  border: black solid 4px;
+}

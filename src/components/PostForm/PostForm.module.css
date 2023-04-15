@@ -1,0 +1,125 @@
+.post-form {
+    font-family: "Noto Sans";
+    display: flex;
+    flex-direction: column;
+    background-color: #CDCDCD;
+    position: relative;
+    border: #000 solid 2px;
+    height: 35rem;
+    width: 25rem;
+    box-shadow: 16px 16px 0 rgba(0, 0, 0, 0.25);
+}
+
+.close {
+    position: absolute;
+    right: 1.5rem;
+    top: 1rem;
+
+    color: black;
+    content:"\00d7";
+    font-size:2em
+}
+
+.close:hover {
+    animation-name: spin;
+    animation-duration: 100ms;
+    color: black;
+}
+
+.close.loading{
+    animation: spin infinite 500ms;
+}
+
+@keyframes spin {
+    from {
+        transform:rotate(0deg);
+    } to {
+        transform:rotate(90deg);
+    }
+}
+
+.header {
+    margin-top: 3rem;
+    margin-left: 3rem;
+    line-height: 100%;
+}
+
+.header-line {
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 100%;
+    margin: 0px;
+    text-align: left;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.header-line-for {
+    font-size: 2rem;
+    font-family: 'Dancing Script', cursive;
+    font-weight: 400;
+    line-height: 100%;
+    margin: 0px;
+    text-align: left;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.header-line-logo {
+    font-size: 1.5rem;
+    font-weight:900;
+    line-height: 100%;
+    margin: 0.5rem 0 0.5rem 0
+
+}
+
+.form-group {
+    margin-left: 3.5rem;
+    margin-right: 3.5rem;
+    display: flex;
+    flex-direction: column;
+    margin-top: 0.5rem
+}
+
+.input-item {
+    padding: 0.25rem 0.5rem;
+    border: black 2px solid;
+    margin-top: 0.8rem;
+    font-size: 0.8rem;
+    color: black;
+    background-color: white;
+    font-weight: 500;
+    font-family: 'Noto Sans'
+}
+
+.option-item {
+    text-align: left;
+}
+
+.description {
+    height: 4rem;
+    vertical-align: top;
+    
+}
+
+.submit {
+    margin-top: 2rem;
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+    border: black solid 2px;
+    border-radius: 0;
+    font-size: 1rem;
+    background-color: #8a8a8a;
+    font-weight: 700;
+    width:fit-content;
+    align-self: center;
+}
+
+.submit:hover {
+    border: black solid 2px;
+    box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.25);
+}
+
+.invalid {
+    border: tomato 2px solid;
+}

@@ -4,9 +4,10 @@ import { BrowserRouter, Route, Router, Routes } from "react-router-dom";
 import SignUpForm, { User } from "./components/SignupForm/SignupForm";
 import LoginForm from "./components/LoginForm/LoginForm";
 import { useState } from "react";
+import PostForm from "./components/PostForm/PostForm";
 
 function App() {
-  const [user, setUser] = useState<User>(
+  const [user, setUser] = useState<User | null>(
     localStorage.getItem("user")
       ? JSON.parse(localStorage.getItem("user") as string)
       : null
@@ -16,10 +17,18 @@ function App() {
     setUser(userDetails);
   };
 
+  const handleLogout = () => {
+    localStorage.removeItem("user");
+    setUser(null);
+  };
+
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<HomePage _user={user} />}></Route>
+        <Route
+          path="/"
+          element={<HomePage _user={user} handleLogout={handleLogout} />}
+        ></Route>
         <Route
           path="signup"
           element={<SignUpForm handleUser={handleUser} />}
@@ -28,6 +37,7 @@ function App() {
           path="login"
           element={<LoginForm handleUser={handleUser} />}
         ></Route>
+        <Route path="post" element={<PostForm user={user} />}></Route>
       </Routes>
     </BrowserRouter>
   );
