@@ -5,6 +5,7 @@ import { z } from "zod";
 import styles from "./PostForm.module.css";
 import LoginForm from "../LoginForm/LoginForm";
 import { User } from "../SignupForm/SignupForm";
+import apiClient from "../../services/api-client";
 
 const postSchema = z.object({
   username: z.string(),
@@ -44,8 +45,19 @@ interface PostFormProps {
 
 const PostForm = ({ user }: PostFormProps) => {
   const onSubmit: SubmitHandler<Post> = (postData) => {
-    console.log("here");
-    console.log(postData);
+    const formData = new FormData();
+    for (const key in postData) {
+      if (key === "image") {
+        formData.append(key, postData[key][0]);
+      } else {
+        formData.append(key, postData[key as keyof Post]);
+      }
+    }
+    const formDataEntries = formData.entries();
+    const formDataObject = Object.fromEntries(formDataEntries);
+    console.log(formDataObject);
+
+    apiClient.post("/post/submit", formData).then((res) => console.log(res));
   };
 
   const {
